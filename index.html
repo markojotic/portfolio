@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marko Jotic Portfolio - Design Generalist</title>
-    <meta name="description" content="Design generalist crafting user experience, user interface, websites, animations, interactions, visuals, prototypes, presentations, brands and so on…" />
+    <title>Marko Jotic - Design Generalist</title>
+    <meta name="description" content="Design generalist crafting user experiences, interfaces, animations, and visual interactions." />
     <meta name="author" content="Marko Jotic" />
 
     <meta property="og:title" content="Marko Jotic - Design Generalist" />
-    <meta property="og:description" content="Design generalist crafting user experience, user interface, websites, animations, interactions, visuals, prototypes, presentations, brands and so on…" />
+    <meta property="og:description" content="Design generalist crafting user experiences, interfaces, animations, and visual interactions." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,6 +122,19 @@
         }
       }
 
+      /* 3-kolonska varijanta sa aspect ratio 1:1 */
+      .work-grid.is-3col-square {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .work-grid.is-3col-square {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
       /* Razmak između više grida */
       .work-grid + .work-grid {
         margin-top: 2rem;
@@ -129,7 +142,7 @@
 
       /* Work Items */
       .work-item {
-        background-color: rgb(250, 250, 250);
+        background-color: rgb(217, 217, 217);
         border-radius: 1rem;
         overflow: hidden;
         transition: all 0.4s ease;
@@ -192,7 +205,7 @@
     <!-- Navigation -->
     <nav>
       <div class="nav-container">
-        <a class="nav-link" href="mailto:markojoticjota@gmail.com">Email</a>
+        <a class="nav-link" href="mailto:marko@example.com">Email</a>
         <a class="nav-link" href="https://www.linkedin.com/in/markojotic" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a class="nav-link" href="https://x.com/markojotic" target="_blank" rel="noopener noreferrer">X</a>
       </div>
@@ -213,95 +226,103 @@
       <div class="work-grid">
         <div class="work-item large">
           <video autoplay loop muted playsinline>
-            <source src="workss/gall-icons.mp4" type="video/mp4">
+            <source src="works/gall-icons.mp4" type="video/mp4">
           </video>
         </div>
       </div>
 
       <!-- 3-kolonski blok -->
       <div class="work-grid is-3col">
-        <div class="work-item medium"><img src="workss/gall-categories.jpg" alt="" loading="lazy"></div>
-        <div class="work-item medium"><img src="workss/gall-modal.jpg" alt="" loading="lazy"></div>
-        <div class="work-item medium"><img src="workss/gall-transactions.jpg" alt="" loading="lazy"></div>
+        <div class="work-item medium"><img src="works/gall-categories.jpg" alt="" loading="lazy"></div>
+        <div class="work-item medium"><img src="works/gall-modal.jpg" alt="" loading="lazy"></div>
+        <div class="work-item medium"><img src="works/gall-transactions.jpg" alt="" loading="lazy"></div>
       </div>
 
       <!-- Ponovo 2-kolonski blok -->
       <div class="work-grid">
-        <div class="work-item small"><video autoplay loop muted playsinline><source src="workss/gall-social-media-post.mp4" type="video/mp4"></video></div>
-        <div class="work-item small"><video autoplay loop muted playsinline><source src="workss/gall-logo.mp4" type="video/mp4"></video></div>
+        <div class="work-item small"><video autoplay loop muted playsinline><source src="works/gall-social-media-post.mp4" type="video/mp4"></video></div>
+        <div class="work-item small"><video autoplay loop muted playsinline><source src="works/gall-logo.mp4" type="video/mp4"></video></div>
       </div>
 
       <div class="work-grid">
         <div class="work-item large">
-          <img src="workss/wolky-web-hero.jpg" alt="">
+          <img src="works/wolky-web-hero.jpg" alt="">
         </div>
       </div>
 
       <!-- 3-kolonski blok -->
       <div class="work-grid is-3col">
-        <div class="work-item medium"><img src="workss/wolky-feed.jpg" alt="" loading="lazy"></div>
-        <div class="work-item medium"><video autoplay loop muted playsinline><source src="workss/wolky-flip-cards.mp4" type="video/mp4"></video></div>
-        <div class="work-item medium"><img src="workss/wolky-albums.jpg" alt="" loading="lazy"></div>
+        <div class="work-item medium"><img src="works/wolky-feed.jpg" alt="" loading="lazy"></div>
+        <div class="work-item medium"><video autoplay loop muted playsinline><source src="works/wolky-flip-cards.mp4" type="video/mp4"></video></div>
+        <div class="work-item medium"><img src="works/wolky-albums.jpg" alt="" loading="lazy"></div>
       </div>
 
       <div class="work-grid">
         <div class="work-item large">
-          <img src="workss/wolky-app-icon.jpg" alt="">
+          <img src="works/wolky-app-icon.jpg" alt="">
         </div>
       </div>
 
       <div class="work-grid">
         <div class="work-item large">
           <video autoplay loop muted playsinline>
-            <source src="workss/whatif-landingpage.mp4" type="video/mp4">
+            <source src="works/whatif-landingpage.mp4" type="video/mp4">
           </video>
         </div>
       </div>
 
       <!-- Ponovo 2-kolonski blok -->
       <div class="work-grid">
-        <div class="work-item small"><video autoplay loop muted playsinline><source src="workss/whatif-logo-animation.mp4" type="video/mp4"></video></div>
-        <div class="work-item small"><img src="workss/whatif-cards.jpg" alt="" loading="lazy"></div>
+        <div class="work-item small"><video autoplay loop muted playsinline><source src="works/whatif-logo-animation.mp4" type="video/mp4"></video></div>
+        <div class="work-item small"><img src="works/whatif-cards.jpg" alt="" loading="lazy"></div>
       </div>
 
       <div class="work-grid">
         <div class="work-item large">
           <video autoplay loop muted playsinline>
-            <source src="workss/brainka-animation.mp4" type="video/mp4">
+            <source src="works/brainka-animation.mp4" type="video/mp4">
           </video>
         </div>
       </div>
 
       <div class="work-grid">
-        <div class="work-item small"><img src="workss/brainka-connect-sources.jpg" alt="" loading="lazy"></div>
-        <div class="work-item small"><img src="workss/brainka-connection.jpg" alt="" loading="lazy"></div>
+        <div class="work-item small"><img src="works/brainka-connect-sources.jpg" alt="" loading="lazy"></div>
+        <div class="work-item small"><img src="works/brainka-connection.jpg" alt="" loading="lazy"></div>
+      </div>
+
+      <!-- 3-kolonski blok -->
+      <div class="work-grid is-3col">
+        <div class="work-item medium"><video autoplay loop muted playsinline><source src="works/books-1.mp4" type="video/mp4"></video></div>
+        <div class="work-item medium"><img src="works/img.jpg" alt="" loading="lazy"></div>
+        <div class="work-item medium"><video autoplay loop muted playsinline><source src="works/books-2.mp4" type="video/mp4"></video></div>
       </div>
 
       <div class="work-grid">
         <div class="work-item large">
-          <img src="workss/lumo-visual.jpg" alt="" loading="lazy">
+          <video autoplay loop muted playsinline>
+            <source src="works/whatif-landingpasge.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
 
-      <div class="work-grid">
-        <div class="work-item large">
-          <video autoplay loop muted playsinline><source src="workss/lumo-landingpage.mp4" type="video/mp4"></video>
-        </div>
+      <!-- PRIMER: 3 kolone sa aspect ratio 1:1 -->
+      <div class="work-grid is-3col-square">
+        <div class="work-item small"><img src="works/typout-1.jpg" alt="" loading="lazy"></div>
+        <div class="work-item small"><img src="works/typout-2.jpg" alt="" loading="lazy"></div>
+        <div class="work-item small"><img src="works/typout-3.jpg" alt="" loading="lazy"></div>
       </div>
-
-      <!-- Ponovo 2-kolonski blok -->
-      <div class="work-grid">
-        <div class="work-item small"><video autoplay loop muted playsinline><source src="workss/lp-leaderboard.mp4" type="video/mp4"></video></div>
-        <div class="work-item small"><img src="workss/lp-select-avatar.jpg" alt="" loading="lazy"></video></div>
+      <div class="work-grid is-3col-square">
+        <div class="work-item small"><img src="works/typout-4.jpg" alt="" loading="lazy"></div>
+        <div class="work-item small"><video autoplay loop muted playsinline><source src="works/typout-5.mp4" type="video/mp4"></video></div>
+        <div class="work-item small"><img src="works/typout-6.jpg" alt="" loading="lazy"></div>
       </div>
-
 
     </section>
 
     <!-- Footer -->
     <footer>
       <div class="footer-container">
-        <a class="nav-link" href="mailto:markojoticjota@gmail.com">markojoticjota [at] gmail [dot] com</a>
+        <a class="nav-link" href="mailto:marko@example.com">markojoticjota [at] gmail [dot] com</a>
       </div>
     </footer>
   </body>
