@@ -147,13 +147,35 @@
 
       /* Work Items */
       .work-item {
-        background-color: transparent;
+        background: linear-gradient(
+          90deg,
+          rgb(18, 18, 18) 0%,
+          rgb(28, 28, 28) 50%,
+          rgb(18, 18, 18) 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 2s ease-in-out infinite;
         border-radius: 1rem;
         overflow: hidden;
         transition: all 0.4s ease;
         will-change: transform;
         border: none;
         outline: none;
+        position: relative;
+      }
+
+      .work-item.media-loaded {
+        animation: none;
+        background: transparent;
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
       }
 
       .work-item img,
@@ -164,6 +186,13 @@
         display: block;
         border: none;
         outline: none;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+      }
+
+      .work-item img.loaded,
+      .work-item video.loaded {
+        opacity: 1;
       }
 
       .work-item.large {
@@ -359,12 +388,36 @@
     </footer>
 
     <script>
+      // Fade in images when loaded
+      document.querySelectorAll('img').forEach(img => {
+        const container = img.closest('.work-item');
+        if (img.complete) {
+          img.classList.add('loaded');
+          if (container) container.classList.add('media-loaded');
+        } else {
+          img.addEventListener('load', () => {
+            img.classList.add('loaded');
+            if (container) container.classList.add('media-loaded');
+          });
+        }
+      });
+
+      // Fade in and play videos when in viewport
       const videos = document.querySelectorAll('video');
       
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           const video = entry.target;
+          const container = video.closest('.work-item');
+          
           if (entry.isIntersecting) {
+            // Fade in when video can play
+            video.addEventListener('canplay', () => {
+              video.classList.add('loaded');
+              if (container) container.classList.add('media-loaded');
+            }, { once: true });
+            
+            // Start playing
             if (video.paused) {
               video.play().catch(e => console.log('Autoplay prevented'));
             }
