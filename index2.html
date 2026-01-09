@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marko Jotic - Design Generalist</title>
+    <meta name="description" content="Design generalist crafting user experiences, interfaces, animations, and visual interactions." />
+    <meta name="author" content="Marko Jotic" />
+
+    <meta property="og:title" content="Marko Jotic - Design Generalist" />
+    <meta property="og:description" content="Design generalist crafting user experiences, interfaces, animations, and visual interactions." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        background-color: rgb(8, 8, 8);
+        color: rgb(250, 250, 250);
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        min-height: 100vh;
+      }
+      nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 1.5rem 2rem; }
+      .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: center; gap: 2rem; }
+      .nav-link { font-size: 0.875rem; letter-spacing: 0.05em; color: inherit; text-decoration: none; }
+      .nav-link:hover { opacity: 0.5; }
+      .hero { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; }
+      h1 { font-size: clamp(4rem, 15vw, 14rem); font-weight: bold; line-height: 0.9; letter-spacing: -0.05em; text-align: center; }
+      .hero p { margin-top: 3rem; text-align: center; font-size: clamp(0.875rem, 2vw, 1rem); max-width: 42rem; line-height: 1.6; }
+      .work-section { padding: 0 2rem 8rem; max-width: 1400px; margin: 0 auto; }
+      .work-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+      @media (min-width: 768px) { .work-grid { grid-template-columns: repeat(2, 1fr); } }
+      .work-grid.is-3col { grid-template-columns: 1fr; }
+      @media (min-width: 768px) { .work-grid.is-3col { grid-template-columns: repeat(3, 1fr); } }
+      .work-grid.is-3col-square { grid-template-columns: 1fr; }
+      @media (min-width: 768px) { .work-grid.is-3col-square { grid-template-columns: repeat(3, 1fr); } }
+      .work-grid + .work-grid { margin-top: 2rem; }
+      .work-item { border-radius: 1rem; overflow: hidden; transition: all 0.4s ease; }
+      .work-item img, .work-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .work-item.large { aspect-ratio: 15 / 9; grid-column: 1 / -1; }
+      .work-item.small { aspect-ratio: 1 / 1; }
+      .work-item.medium { aspect-ratio: 9 / 19.5; }
+      .work-item:hover { transform: scale(0.98); opacity: 0.9; }
+      footer { padding: 0 2rem 3rem; }
+      .footer-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: center; }
+      .footer-link { font-size: 0.875rem; letter-spacing: 0.05em; color: rgba(250,250,250); text-decoration: none; }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a class="nav-link" href="mailto:marko@example.com">Email</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/markojotic" target="_blank">LinkedIn</a>
+        <a class="nav-link" href="https://x.com/markojotic" target="_blank">X</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>MARKO JOTIC</h1>
+      <p>I'm a design generalist ━ That means I craft user experience, user interface, websites, animations, interactions, visuals, prototypes, presentations, brands and so on…</p>
+    </section>
+
+    <section class="work-section">
+      <div class="work-grid">
+        <div class="work-item large">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/gall-icons.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item small">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/gall-social-media-post.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="work-item small">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/gall-logo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item large">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/whatif-landingpage.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item small">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/whatif-logo-animation.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item large">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/brainka-animation.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="work-grid is-3col">
+        <div class="work-item medium">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/books-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="work-item medium">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/books-2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item large">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/pimosa.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="work-grid is-3col-square">
+        <div class="work-item small">
+          <video autoplay loop muted playsinline class="lazy-video">
+            <source src="workss/typout-5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <a class="footer-link" href="mailto:marko@example.com">markojoticjota [at] gmail [dot] com</a>
+      </div>
+    </footer>
+
+    <script>
+      const videos = document.querySelectorAll("video.lazy-video");
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.play();
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.25 });
+
+      videos.forEach(video => {
+        video.pause();
+        observer.observe(video);
+      });
+    </script>
+  </body>
+</html>
