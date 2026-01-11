@@ -402,8 +402,9 @@
         }
       });
 
-      // Fade in and play videos when in viewport
+      // Optimized video lazy loading with IntersectionObserver
       const videos = document.querySelectorAll('video');
+      const loadedVideos = new WeakSet();
       
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -411,6 +412,16 @@
           const container = video.closest('.work-item');
           
           if (entry.isIntersecting) {
+            // Load video source only when it enters viewport
+            if (!loadedVideos.has(video)) {
+              const source = video.querySelector('source');
+              if (source && source.src) {
+                video.src = source.src;
+                video.load();
+                loadedVideos.add(video);
+              }
+            }
+            
             // Fade in when video can play
             video.addEventListener('canplay', () => {
               video.classList.add('loaded');
@@ -425,7 +436,7 @@
             video.pause();
           }
         });
-      }, { rootMargin: '50px' });
+      }, { rootMargin: '200px' });
       
       videos.forEach(video => observer.observe(video));
     </script>
