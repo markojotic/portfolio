@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moments iOS App - All your moments in one place.</title>
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --muted: rgba(255,255,255,0.6);
+      --button-bg: #1c1c1c;
+      --button-hover: #2a2a2a;
+      --radius: 999px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: var(--text);
+    }
+    /* Layout */
+    .page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      min-height: 100vh;
+      padding: 80px;
+      gap: 40px;
+    }
+    /* Left */
+    .content {
+      max-width: 520px;
+    }
+    .logo {
+      margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    .logo img {
+      height: 40px;
+    }
+    .eyebrow {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 700;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+    .subtitle {
+      font-size: 24px;
+      color: var(--muted);
+      margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--button-bg);
+      padding: 14px 22px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      transition: background 0.2s ease, transform 0.2s ease;
+      animation: fadeInUp 0.8s ease-out 0.6s backwards;
+    }
+    .cta:hover {
+      background: var(--button-hover);
+      transform: translateY(-1px);
+    }
+    /* Right */
+    .visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInScale 1s ease-out 0.4s backwards;
+    }
+    .visual img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Footer */
+    footer {
+      position: absolute;
+      bottom: 40px;
+      left: 80px;
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+      animation: fadeInUp 0.8s ease-out 0.8s backwards;
+    }
+    /* Mobile */
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+        padding: 48px 24px 120px;
+        text-align: center;
+      }
+      .content {
+        max-width: 100%;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      .subtitle {
+        font-size: 16px;
+      }
+      .visual {
+        margin-top: 48px;
+      }
+      footer {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <!-- Left -->
+    <section class="content">
+      <div class="logo">
+        <img src="Logo.png" alt="Moments logo">
+      </div>
+      <h1>
+        All your moments,<br>
+        in one place.
+      </h1>
+      <p class="subtitle">
+        Track what matters most.
+      </p>
+      <a href="https://example.com" class="cta">
+         Coming Soon
+      </a>
+    </section>
+    <!-- Right -->
+    <section class="visual">
+      <img src="img-phones.png" alt="Moments app preview">
+    </section>
+  </main>
+  <footer>
+    <a href="https://markojotic.com">Made by Marko Jotic</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="mailto:markojoticjota@gmail.com">Contact</a>
+  </footer>
+</body>
+</html>
