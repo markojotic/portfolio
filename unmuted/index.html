@@ -59,13 +59,14 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding: 120px 24px 60px;
+            padding: 120px 24px 0;
             text-align: center;
+            overflow: hidden;
         }
 
         .hero-content {
@@ -130,6 +131,7 @@
             gap: 20px;
             padding: 0 20px;
             margin-top: auto;
+            padding-bottom: 0;
         }
 
         .phone-mockup {
@@ -138,39 +140,52 @@
             border-radius: 32px;
             overflow: hidden;
             box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
-            opacity: 0;
-            filter: blur(20px);
-            transform: translateY(100px);
-            transition: transform 0.4s ease;
+            cursor: pointer;
         }
 
         .phone-mockup img {
             width: 100%;
             height: auto;
             display: block;
+            transition: transform 0.4s ease;
         }
 
-        .phone-mockup:hover {
+        .phone-mockup:hover img {
             transform: translateY(-25px);
         }
 
         .phone-mockup:nth-child(1) {
+            opacity: 0;
+            filter: blur(20px);
+            transform: translateY(100px);
             animation: phoneReveal 1.2s ease-out 1s forwards;
         }
 
         .phone-mockup:nth-child(2) {
+            opacity: 0;
+            filter: blur(20px);
+            transform: translateY(100px);
             animation: phoneReveal 1.2s ease-out 1.15s forwards;
         }
 
         .phone-mockup:nth-child(3) {
+            opacity: 0;
+            filter: blur(20px);
+            transform: translateY(100px);
             animation: phoneReveal 1.2s ease-out 1.3s forwards;
         }
 
         .phone-mockup:nth-child(4) {
+            opacity: 0;
+            filter: blur(20px);
+            transform: translateY(100px);
             animation: phoneReveal 1.2s ease-out 1.45s forwards;
         }
 
         .phone-mockup:nth-child(5) {
+            opacity: 0;
+            filter: blur(20px);
+            transform: translateY(100px);
             animation: phoneReveal 1.2s ease-out 1.6s forwards;
         }
 
@@ -247,8 +262,8 @@
             }
 
             .hero {
-                padding: 100px 20px 40px;
-                min-height: auto;
+                padding: 100px 20px 0;
+                height: 100vh;
             }
 
             .hero-content {
@@ -295,7 +310,7 @@
 
         @media (max-width: 400px) {
             .hero {
-                padding: 90px 16px 30px;
+                padding: 90px 16px 0;
             }
 
             .cta-button {
@@ -331,19 +346,19 @@
 
         <div class="mockups-container">
             <div class="phone-mockup">
-                <img src="./mockup-1.png" alt="Unmuted App - Question Card">
+                <img src="mockup-1.png" alt="Unmuted App - Question Card">
             </div>
             <div class="phone-mockup">
-                <img src="./mockup-2.png" alt="Unmuted App - Home Screen">
+                <img src="mockup-2.png" alt="Unmuted App - Home Screen">
             </div>
             <div class="phone-mockup">
-                <img src="./mockup-3.png" alt="Unmuted App - Couples Categories">
+                <img src="mockup-3.png" alt="Unmuted App - Couples Categories">
             </div>
             <div class="phone-mockup">
-                <img src="./mockup-4.png" alt="Unmuted App - Card Stack">
+                <img src="mockup-4.png" alt="Unmuted App - Card Stack">
             </div>
             <div class="phone-mockup">
-                <img src="./mockup-5.png" alt="Unmuted App - Saved Questions">
+                <img src="mockup-5.png" alt="Unmuted App - Saved Questions">
             </div>
         </div>
     </section>
